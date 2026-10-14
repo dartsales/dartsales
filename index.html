@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DArt Sales — Tecnologia · Dados  · Marketing Digital · Para Seu Negócio</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Paleta DArt: carvão, azul profundo, azul céu, laranja, névoa */
+:root{--bg:#F3F6F9;--ink:#0F1217;--sub:#4E5E6B;--line:#D5DEE6;--card:#fff;--ac:#0E406D;--soft:#E6EEF5;--vi:#0E406D;--co:#F36921;--mi:#2D7DB5;--nv:#0F1217;--b1:#0E406D;--b2:#2D7DB5;--bgc:var(--bg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1217;--ink:#EDF2F6;--sub:#9FB0BD;--line:#232C36;--card:#161C24;--ac:#50A2CD;--soft:#141B24;--vi:#50A2CD;--mi:#50A2CD;--nv:#0A0D12;--b1:#3A8AD0;--b2:#50A2CD}}
+:root[data-theme="dark"]{--bg:#0F1217;--ink:#EDF2F6;--sub:#9FB0BD;--line:#232C36;--card:#161C24;--ac:#50A2CD;--soft:#141B24;--vi:#50A2CD;--mi:#50A2CD;--nv:#0A0D12;--b1:#3A8AD0;--b2:#50A2CD}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 'Inter',system-ui,sans-serif}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.2;margin:0 0 12px}
+h1{font-size:clamp(2rem,5.5vw,3.1rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,4vw,2.05rem)}
+h3{font-size:1.08rem}
+p{margin:0 0 14px}
+a{color:inherit}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:68px 0}
+.alt{background:var(--soft)}
+.sub{color:var(--sub)}
+.ey{font:600 .78rem 'Sora',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.wm{font:700 1.4rem 'Sora',sans-serif;letter-spacing:-.01em}.wm b{color:var(--b1)}.wm i{font-style:normal;color:var(--co)}
+.sl{font:500 1.02rem 'Sora',sans-serif;color:var(--b2)}
+@media(max-width:420px){.sl{display:none}}
+nav{display:flex;align-items:center}
+nav a{margin-left:20px;font-size:.92rem;text-decoration:none;color:var(--sub)}
+nav a.btn{color:#0F1217}
+@media(max-width:760px){nav a.h{display:none}}
+.btn{display:inline-block;background:var(--co);color:#0F1217;font-weight:600;text-decoration:none;padding:14px 24px;border-radius:8px;border:2px solid var(--co)}
+.btn.co{background:var(--co);border-color:var(--co);color:#0F1217}
+.btn.o{background:transparent;color:inherit;border-color:currentColor;opacity:.9}
+.btn.s{padding:9px 16px;font-size:.9rem}
+.hero{background:var(--nv);color:#EDF2F6;padding:72px 0 64px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+@media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
+.hero .ey{color:#50A2CD}
+.hero p{color:#B3C0CB}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.panel{background:#161C24;border:1px solid #232C36;border-radius:14px;padding:20px}
+.panel small{color:#9FB0BD;display:block;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid #232C36;gap:12px;font-size:.95rem}
+.row:last-of-type{border:none}
+.row b{font:700 1.4rem 'Sora',sans-serif}
+.dash{background:#161C24;border:1px solid #232C36;border-radius:14px;padding:16px;color:#EDF2F6;font-size:.82rem}
+.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font:600 .85rem 'Sora',sans-serif}
+.dh em{font:500 .7rem 'Inter',sans-serif;color:#9FB0BD;border:1px solid #2F3A46;border-radius:99px;padding:1px 9px;font-style:normal}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.kp div{background:#0F1217;border:1px solid #232C36;border-radius:8px;padding:9px 10px}
+.kp small{display:block;color:#9FB0BD;font-size:.68rem;line-height:1.25;min-height:2.5em}
+.kp b{font:700 1.15rem 'Sora',sans-serif;color:#50A2CD}.kp .o b{color:#F36921}
+.ch{margin-top:12px}.ch small,.bars small{color:#9FB0BD;font-size:.72rem}
+.ch svg{width:100%;height:auto;display:block;margin-top:6px}
+.wk{display:flex;justify-content:space-between;color:#9FB0BD;font-size:.66rem;padding:0 2px}
+.ln{fill:none;stroke:#50A2CD;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+.ar{fill:#50A2CD;fill-opacity:0}
+.go .ln{stroke-dashoffset:0;transition:stroke-dashoffset 2s ease}
+.go .ar{fill-opacity:.14;transition:fill-opacity 1s ease 1.4s}
+.dot{fill:#F36921;opacity:0}.go .dot{opacity:1;transition:opacity .3s ease 1.9s}
+@keyframes pu{0%{r:5;opacity:.6}100%{r:13;opacity:0}}
+.pl{fill:#F36921;opacity:0}.go .pl{animation:pu 1.6s ease-out 2s infinite}
+.bars{margin-top:12px;display:grid;gap:7px}
+.br{display:grid;grid-template-columns:96px 1fr 34px;align-items:center;gap:8px;font-size:.72rem;color:#B3C0CB}
+.tr{height:7px;background:#0F1217;border-radius:4px;overflow:hidden}
+.f{height:100%;width:0;border-radius:4px;background:var(--c)}
+.go .f{width:var(--w);transition:width 1.4s ease .3s}
+.tk{margin-top:12px;border-top:1px solid #232C36;padding-top:10px;display:flex;gap:8px;align-items:center;font-size:.78rem;color:#B3C0CB;min-height:34px}
+.tk i{width:8px;height:8px;border-radius:50%;background:#F36921;flex:none;animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.35}}
+.tk span{transition:opacity .3s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.pil{font:600 .95rem 'Sora',sans-serif;color:var(--ac);margin:34px 0 0}.soon{font:600 .66rem 'Sora',sans-serif;background:var(--soft);border:1px solid var(--ac);color:var(--ac);border-radius:99px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.strip{background:var(--card);border-bottom:1px solid var(--line)}
+.strip .w{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:20px;padding-bottom:20px}
+@media(max-width:820px){.strip .w{grid-template-columns:1fr 1fr}}
+.strip div{font-size:.9rem;line-height:1.4;color:var(--sub)}
+.strip b{display:block;color:var(--ink);font-size:.95rem;margin-bottom:2px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+@media(max-width:820px){.g3{grid-template-columns:1fr}}
+.mini{gap:12px;margin-top:14px}.mini div{border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.86rem;line-height:1.45;color:var(--sub);background:var(--card)}.mini b{display:block;color:var(--ink);font-size:.92rem;margin-bottom:2px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:24px}
+@media(max-width:820px){.cols{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card p{margin:0;color:var(--sub);font-size:.96rem}
+.card .q{color:var(--ink);font-weight:600;margin-bottom:8px}
+.bar{height:5px;width:44px;border-radius:3px;margin-bottom:14px}
+.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--vi);color:var(--bg);font:700 .95rem 'Sora',sans-serif;margin-bottom:12px}
+ul.l{list-style:none;padding:0;margin:0}
+ul.l li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:.96rem}
+ul.l li:last-child{border:none}
+ul.l li:before{content:"✓";position:absolute;left:0;color:var(--mi);font-weight:700}
+ul.l.x li:before{content:"✕";color:var(--co)}
+.me{border:2px solid var(--vi)}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--sub)}
+.ph{background:var(--soft);border:1px dashed var(--ac);border-radius:6px;padding:2px 8px;font-size:.85em}
+.av{width:56px;height:56px;border-radius:50%;background:var(--nv);display:grid;place-items:center;margin-bottom:12px}
+.fin{background:var(--nv);color:#EDF2F6;text-align:center}
+.fin p{color:#B3C0CB}
+footer{background:var(--nv);color:#9FB0BD;padding:26px 0;font-size:.88rem;border-top:1px solid #232C36;--b1:#3A8AD0;--b2:#50A2CD;--bgc:#0A0D12}
+footer .w{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.zap{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#1FA855;color:#fff;font-weight:600;text-decoration:none;padding:13px 20px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3);z-index:6}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sym" viewBox="0 0 120 120"><circle cx="60" cy="60" r="46" fill="none" style="stroke:var(--b1)" stroke-width="5"/><circle cx="60" cy="60" r="28" fill="none" style="stroke:var(--b2)" stroke-width="3"/><circle cx="60" cy="60" r="12" fill="#F36921"/><g transform="rotate(-45 60 60)"><line x1="76" y1="60" x2="118" y2="60" style="stroke:var(--bgc)" stroke-width="11"/><line x1="76" y1="60" x2="118" y2="60" style="stroke:var(--b2)" stroke-width="4" stroke-linecap="round"/><polygon points="108,60 114,50 124,50 118,60" fill="#F36921"/><polygon points="108,60 114,70 124,70 118,60" style="fill:var(--b2)"/><polygon points="64,60 76,53 76,67" fill="#DDE6EE"/></g></symbol></defs></svg>
+
+<header><div class="w">
+<a class="logo" href="#topo" aria-label="DArt Sales"><svg width="38" height="38" viewBox="0 0 120 120" aria-hidden="true"><use href="#sym" width="120" height="120"/></svg><span class="wm"><b>DA</b><i>rt</i></span><span class="sl">Sales</span></a>
+<nav><a class="h" href="#servicos">Serviços</a><a class="h" href="#metodo">Método</a><a class="h" href="#quem">Quem somos</a><a class="h" href="#duvidas">Dúvidas</a><a class="btn s" href="#contato">Falar com a gente</a></nav>
+</div></header>
+
+<div class="hero" id="topo"><div class="w grid">
+<div>
+<div class="ey">Dados + Marketing · Fortaleza</div>
+<h1>Marketing guiado por dados, para você saber de onde vem cada cliente.</h1>
+<p>Unimos tecnologia, dados e marketing digital para sua empresa ser encontrada, atrair clientes e mostrar com números o que dá retorno. Você não precisa entender de tecnologia: explicamos tudo em português claro.</p>
+<div class="cta"><a class="btn co" href="#contato">Quero um diagnóstico</a><a class="btn o" href="#servicos">Ver o que fazemos</a></div>
+</div>
+<div class="dash" id="dash" role="img" aria-label="Ilustração animada de um relatório mensal com contatos, origem dos clientes e custo por contato">
+<div class="dh"><span>Relatório do mês</span><em>Ilustração</em></div>
+<div class="kp">
+<div><small>Contatos no WhatsApp</small><b data-to="128">128</b></div>
+<div><small>Ligações pelo Google</small><b data-to="46">46</b></div>
+<div class="o"><small>Custo por contato</small><b data-to="9.8" data-pre="R$ " data-dec="2" data-from="14.5">R$ 9,80</b></div>
+</div>
+<div class="ch"><small>Contatos por semana</small>
+<svg viewBox="0 0 300 110" aria-hidden="true"><g stroke="#232C36" stroke-width="1"><line x1="0" y1="30" x2="300" y2="30"/><line x1="0" y1="62" x2="300" y2="62"/><line x1="0" y1="94" x2="300" y2="94"/></g>
+<path class="ar" d="M10 88 L50 78 L90 82 L130 60 L170 64 L210 44 L250 36 L290 18 L290 106 L10 106 Z"/>
+<path class="ln" pathLength="1" d="M10 88 L50 78 L90 82 L130 60 L170 64 L210 44 L250 36 L290 18"/>
+<circle class="pl" cx="290" cy="18" r="5"/><circle class="dot" cx="290" cy="18" r="4.5"/></svg>
+<div class="wk"><span>Sem 1</span><span>Sem 2</span><span>Sem 3</span><span>Sem 4</span></div></div>
+<div class="bars"><small>De onde vieram os contatos</small>
+<div class="br"><span>Perfil no Google</span><div class="tr"><div class="f" style="--w:46%;--c:#50A2CD"></div></div><span>46%</span></div>
+<div class="br"><span>Anúncios</span><div class="tr"><div class="f" style="--w:34%;--c:#F36921"></div></div><span>34%</span></div>
+<div class="br"><span>Instagram</span><div class="tr"><div class="f" style="--w:20%;--c:#3A8AD0"></div></div><span>20%</span></div></div>
+<div class="tk"><i></i><span id="tkt">Novo contato pelo WhatsApp</span></div>
+</div>
+<script>
+(function(){var d=document.getElementById('dash');if(!d)return;
+var nums=[].slice.call(d.querySelectorAll('[data-to]')),tk=document.getElementById('tkt'),mi=0;
+var msgs=['Novo contato pelo WhatsApp','Ligação recebida pelo Google','Nova avaliação 5 estrelas no Google','Pedido de orçamento pelo Instagram'];
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fmt(n,el){var dec=+el.dataset.dec||0,t=n.toFixed(dec);if(dec)t=t.replace('.',',');return(el.dataset.pre||'')+t;}
+function count(){nums.forEach(function(el){var to=+el.dataset.to,from=el.dataset.from?+el.dataset.from:0,t0=performance.now();(function step(t){var p=Math.min(1,(t-t0)/1800);p=1-Math.pow(1-p,3);el.textContent=fmt(from+(to-from)*p,el);if(p<1)requestAnimationFrame(step);})(t0);});}
+function run(){d.classList.remove('go');void d.offsetWidth;d.classList.add('go');count();}
+if(reduce){d.classList.add('go');return;}
+run();setInterval(run,9000);
+setInterval(function(){tk.style.opacity=0;setTimeout(function(){mi=(mi+1)%msgs.length;tk.textContent=msgs[mi];tk.style.opacity=1;},300);},2600);
+})();
+</script>
+</div></div>
+
+<div class="strip"><div class="w">
+<div><b>Contas no seu nome</b>Se um dia nos separarmos, tudo continua com você.</div>
+<div><b>Relatório que se entende</b>Sem gráfico complicado nem sigla.</div>
+<div><b>Falando com quem faz</b>Atendimento direto com os sócios.</div>
+<div><b>Contrato claro</b>Prazo mínimo de 3 meses e escopo escrito.</div>
+</div></div>
+
+<section><div class="w">
+<div class="ey">Você se reconhece?</div>
+<h2>O que mais ouvimos de donos de empresa</h2>
+<div class="g3">
+<div class="card"><div class="bar" style="background:var(--co)"></div><div class="q">“Paguei por anúncio e não vi retorno.”</div><p>Muitas vezes ninguém mede o que o anúncio gerou. Nós configuramos a medição antes de gastar a primeira verba.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><div class="q">“Eu não entendo o relatório da agência.”</div><p>Você recebe um resumo curto e uma conversa mensal para tirar dúvidas.</p></div>
+<div class="card"><div class="bar" style="background:var(--mi)"></div><div class="q">“Não sei de onde vêm meus clientes.”</div><p>Medimos cada contato (Google, Instagram, anúncios) para você saber o que traz cliente e o que só gasta dinheiro.</p></div>
+</div>
+<div class="cols">
+<div class="card"><h3>Agência comum</h3><ul class="l x"><li>Entrega relatório de curtidas e alcance</li><li>Fala em termos técnicos</li><li>Abre contas em nome da agência</li><li>Decide no feeling e promete resultado rápido</li></ul></div>
+<div class="card me"><h3>DArt Sales</h3><ul class="l"><li>Mostra contatos, ligações e custo por contato</li><li>Explica tudo em português claro</li><li>Mantém as contas no nome da sua empresa</li><li>Decide com dados e fala com franqueza sobre prazo e limites</li></ul></div>
+</div>
+</div></section>
+
+<section class="alt" id="servicos"><div class="w">
+<div class="ey">O que fazemos</div>
+<h2>Marketing e dados, trabalhando juntos</h2>
+<p class="sub">O marketing traz as pessoas até você. Os dados mostram o que está funcionando. Fazemos as duas coisas, com a mesma equipe.</p>
+<h3 class="pil">Marketing digital</h3>
+<div class="g3">
+<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Tráfego pago</h3><p>Anúncios no Instagram, Facebook e Google para atrair clientes novos. Inclui um relatório mensal. A verba dos anúncios é paga por você direto às plataformas, separada da nossa gestão.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Gestão de redes sociais</h3><p>Planejamento e publicação de conteúdo, principalmente no Instagram, com a quantidade de posts combinada em contrato. Produção de vídeo mais elaborada é combinada à parte.</p></div>
+<div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Google Meu Negócio</h3><p>Sua empresa aparece no Maps e na busca quando alguém procura o que você vende perto dele. Cuidamos do perfil, das postagens, das avaliações e do ranqueamento local.</p></div>
+</div>
+<h3 class="pil">Dados e tecnologia</h3>
+<div class="g3">
+<div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Medição e rastreamento</h3><p>Configuramos as ferramentas (Google Analytics e o pixel dos anúncios) para você saber de onde vem cada contato e quanto custa cada um.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Painel de resultados</h3><p>Reunimos os números de anúncios, Google e Instagram, e de vendas quando possível, em um painel simples que você abre no celular.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Automação de processos <span class="soon">Em breve</span></h3><p>Tarefas repetidas, como responder as primeiras mensagens ou organizar cadastros e planilhas, passam a ser feitas sozinhas. Estamos estruturando este serviço.</p></div>
+</div>
+<h3 style="margin-top:38px;font-size:.98rem">Também podemos ajudar com</h3>
+<p class="sub" style="font-size:.92rem;margin-bottom:0">Serviços complementares, combinados conforme a necessidade de cada empresa.</p>
+<div class="g3 mini">
+<div><b>Reputação online</b>Resposta e estratégia para avaliações no Google e nas redes.</div>
+<div><b>Páginas de captura</b>Landing pages simples para campanhas de anúncios.</div>
+<div><b>WhatsApp Business</b>Catálogo, respostas rápidas e fluxo simples de atendimento.</div>
+<div><b>E-mail marketing</b>Para empresas que já têm uma base de contatos.</div>
+<div><b>Consultoria avulsa</b>Orientação pontual para quem quer aprender a fazer internamente.</div>
+<div><b>Identidade visual básica</b>Sob consulta.</div>
+</div>
+</div></section>
+
+<section id="metodo"><div class="w">
+<div class="ey">Nosso método</div>
+<h2>Método Claro: três passos, sem mistério</h2>
+<div class="g3">
+<div class="card"><span class="num">1</span><h3>Entender</h3><p>Diagnóstico pago de como sua empresa aparece hoje e de quais dados ela já tem. O relatório é seu, mesmo que você não contrate a gente.</p></div>
+<div class="card"><span class="num">2</span><h3>Montar</h3><p>Configuramos contas e medição e preparamos as primeiras ações. Você aprova antes de ir ao ar.</p></div>
+<div class="card"><span class="num">3</span><h3>Acompanhar</h3><p>Ajustes contínuos, relatório simples todo mês e uma conversa para decidir os próximos passos.</p></div>
+</div>
+<div class="cols" style="grid-template-columns:1fr">
+<div class="card"><h3>Você pode esperar</h3><ul class="l"><li>Resposta rápida pelo WhatsApp</li><li>Proposta com valor fechado, sem surpresas</li><li>Contrato com prazo e escopo escritos</li></ul></div>
+</div>
+</div></section>
+
+<section class="alt" id="quem"><div class="w">
+<div class="ey">Quem somos</div>
+<h2>Equipe técnica com foco em resultado</h2>
+<p class="sub" style="max-width:62ch">Situada em Fortaleza, a DArt Sales reúne uma equipe com qualificação em engenharia de dados, ciência da computação e processamento de dados. Unimos tecnologia, dados e marketing para medir direito o que cada real investido trouxe de volta.</p>
+<div class="g3">
+<div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Engenharia de dados</h3><p>Dados organizados e confiáveis, para o relatório mostrar o que realmente aconteceu.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Ciência da computação</h3><p>Configuração correta das ferramentas e da medição, para que nada se perca pelo caminho.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Processamento de dados</h3><p>Análise dos números para decidir onde vale investir mais e onde cortar.</p></div>
+</div>
+<p style="margin-top:20px"><span class="ph">Casos reais e depoimentos entram aqui assim que os primeiros clientes autorizarem. Não publique números antes disso.</span></p>
+</div></section>
+
+<section id="duvidas"><div class="w" style="max-width:760px">
+<div class="ey">Dúvidas comuns</div>
+<h2>Perguntas que todo dono de empresa faz</h2>
+<details><summary>Vocês só fazem marketing?</summary><p>O marketing digital é o ponto de partida. Também ajudamos a medir e organizar os dados da empresa para você decidir melhor. Automação de processos é o próximo passo, e falamos com clareza o que já está pronto e o que ainda não.</p></details>
+<details><summary>Quanto custa?</summary><p>Depende do que sua empresa precisa. Depois da conversa e do diagnóstico, enviamos uma proposta com valor fechado.</p></details>
+<details><summary>Quanto devo investir em anúncios?</summary><p>Varia por segmento. Verbas muito baixas geram poucos dados para melhorar a campanha, e falamos com franqueza sobre isso antes de você gastar.</p></details>
+<details><summary>Em quanto tempo vejo resultado?</summary><p>Alguns sinais aparecem nas primeiras semanas, mas um resultado consistente costuma levar de 3 a 6 meses.</p></details>
+<details><summary>As contas ficam no meu nome?</summary><p>Sim. Perfis, páginas e contas de anúncio ficam em nome da sua empresa.</p></details>
+<details><summary>Preciso saber de tecnologia?</summary><p>Não. Cuidamos da parte técnica. Precisamos de você para explicar o que a empresa vende e atender bem quem chega.</p></details>
+</div></section>
+
+<section class="fin" id="contato"><div class="w" style="max-width:760px">
+<h2>Vamos conversar sobre a sua empresa?</h2>
+<p>A primeira conversa é sem compromisso. Você explica seu negócio e nós dizemos com sinceridade se podemos ajudar.</p>
+<div class="cta" style="justify-content:center"><a class="btn co" href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico.">Chamar no WhatsApp</a><a class="btn o" href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></div>
+<p style="margin-top:16px;font-size:.88rem"><span class="ph" style="background:#161C24;border-color:#50A2CD">Trocar número do WhatsApp e e-mail</span> · Fortaleza, CE</p>
+</div></section>
+
+<footer><div class="w"><span class="logo" style="gap:8px"><svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true"><use href="#sym" width="120" height="120"/></svg><span class="wm" style="font-size:1.1rem"><b>DA</b><i>rt</i></span><span class="sl" style="font-size:.9rem">Sales</span></span><span>© DArt Sales · CNPJ 00.000.000/0001-00 · Fortaleza, Ceará</span></div></footer>
+<a class="zap" href="https://wa.me/5585900000000">WhatsApp</a>
+</body>
+</html>
