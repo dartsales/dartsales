@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DArt Sales — Tecnologia · Dados  · Marketing Digital · Para Seu Negócio</title>
+<title>DArt Sales — Tecnologia, dados e marketing digital para o seu negócio</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Paleta DArt: carvão, azul profundo, azul céu, laranja, névoa */
@@ -26,19 +26,19 @@ section{padding:68px 0}
 .sub{color:var(--sub)}
 .ey{font:600 .78rem 'Sora',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-header .w{display:flex;align-items:center;justify-content:space-between;height:62px}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:62px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .wm{font:700 1.4rem 'Sora',sans-serif;letter-spacing:-.01em}.wm b{color:var(--b1)}.wm i{font-style:normal;color:var(--co)}
 .sl{font:500 1.02rem 'Sora',sans-serif;color:var(--b2)}
 @media(max-width:420px){.sl{display:none}}
-nav{display:flex;align-items:center}
-nav a{margin-left:20px;font-size:.92rem;text-decoration:none;color:var(--sub)}
+nav{display:flex;align-items:center;flex-shrink:0}
+nav a{margin-left:20px;font-size:.92rem;text-decoration:none;color:var(--sub);white-space:nowrap}
 nav a.btn{color:#0F1217}
-@media(max-width:760px){nav a.h{display:none}}
+@media(max-width:900px){nav a.h{display:none}}
 .btn{display:inline-block;background:var(--co);color:#0F1217;font-weight:600;text-decoration:none;padding:14px 24px;border-radius:8px;border:2px solid var(--co)}
 .btn.co{background:var(--co);border-color:var(--co);color:#0F1217}
 .btn.o{background:transparent;color:inherit;border-color:currentColor;opacity:.9}
-.btn.s{padding:9px 16px;font-size:.9rem}
+.btn.s{padding:9px 16px;font-size:.9rem;white-space:nowrap;line-height:1.3}
 .hero{background:var(--nv);color:#EDF2F6;padding:72px 0 64px}
 .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
 @media(max-width:820px){.hero .grid{grid-template-columns:1fr}}
@@ -78,6 +78,17 @@ nav a.btn{color:#0F1217}
 .tk span{transition:opacity .3s}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .pil{font:600 .95rem 'Sora',sans-serif;color:var(--ac);margin:34px 0 0}.soon{font:600 .66rem 'Sora',sans-serif;background:var(--soft);border:1px solid var(--ac);color:var(--ac);border-radius:99px;padding:1px 8px;margin-left:8px;vertical-align:middle}
+.pdc{display:grid;grid-template-columns:1fr minmax(250px,350px) 1fr;grid-template-areas:"gp ring gd" "ga ring gc";gap:18px 30px;align-items:center;margin-top:28px}
+.pdc>svg{grid-area:ring;width:100%;height:auto;display:block}
+.gp{grid-area:gp}.gd{grid-area:gd}.gc{grid-area:gc}.ga{grid-area:ga}
+@media(max-width:900px){.pdc{grid-template-columns:1fr;grid-template-areas:"ring" "gp" "gd" "gc" "ga"}.pdc>svg{max-width:340px;margin:0 auto}}
+.pds{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--kb);border-radius:12px;padding:16px 18px}
+.pds .k{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font:700 1.1rem 'Sora',sans-serif;color:var(--kc);background:var(--kb)}
+.pds h3{margin:0 0 4px;font-size:1rem}.pds h3 span{font-weight:500;color:var(--sub);font-size:.85em}
+.pds p{margin:0;color:var(--sub);font-size:.94rem}
+@keyframes hl{0%,24%{opacity:1}30%,94%{opacity:.4}100%{opacity:1}}
+.a{animation:hl 8s ease-in-out infinite}.a1{animation-delay:2s}.a2{animation-delay:4s}.a3{animation-delay:6s}
+@media (prefers-reduced-motion:reduce){.a{animation:none}}
 .strip{background:var(--card);border-bottom:1px solid var(--line)}
 .strip .w{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:20px;padding-bottom:20px}
 @media(max-width:820px){.strip .w{grid-template-columns:1fr 1fr}}
@@ -96,9 +107,9 @@ nav a.btn{color:#0F1217}
 ul.l{list-style:none;padding:0;margin:0}
 ul.l li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:.96rem}
 ul.l li:last-child{border:none}
-ul.l li:before{content:"✓";position:absolute;left:0;color:var(--mi);font-weight:700}
+ul.l li:before{content:"✓";position:absolute;left:0;color:#31ff00;font-weight:700}
 ul.l.x li:before{content:"✕";color:var(--co)}
-.me{border:2px solid var(--vi)}
+.me{border:2px solid var(--co)}
 details{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:10px}
 summary{cursor:pointer;font-weight:600}
 details p{margin:10px 0 0;color:var(--sub)}
@@ -121,9 +132,9 @@ footer .w{display:flex;align-items:center;justify-content:space-between;gap:14px
 
 <div class="hero" id="topo"><div class="w grid">
 <div>
-<div class="ey">Dados + Marketing · Fortaleza</div>
-<h1>Marketing guiado por dados, para você saber de onde vem cada cliente.</h1>
-<p>Unimos tecnologia, dados e marketing digital para sua empresa ser encontrada, atrair clientes e mostrar com números o que dá retorno. Você não precisa entender de tecnologia: explicamos tudo em português claro.</p>
+<div class="ey">Tecnologia · Gestão · Dados · Marketing</div>
+<h1>O melhor da tecnologia alavancando seu negócio</h1>
+<p>Cuidamos da parte técnica e mostramos, com números simples, o que traz clientes e como está a saúde do seu negócio.</p>
 <div class="cta"><a class="btn co" href="#contato">Quero um diagnóstico</a><a class="btn o" href="#servicos">Ver o que fazemos</a></div>
 </div>
 <div class="dash" id="dash" role="img" aria-label="Ilustração animada de um relatório mensal com contatos, origem dos clientes e custo por contato">
@@ -161,62 +172,65 @@ setInterval(function(){tk.style.opacity=0;setTimeout(function(){mi=(mi+1)%msgs.l
 </div></div>
 
 <div class="strip"><div class="w">
-<div><b>Contas no seu nome</b>Se um dia nos separarmos, tudo continua com você.</div>
-<div><b>Relatório que se entende</b>Sem gráfico complicado nem sigla.</div>
-<div><b>Falando com quem faz</b>Atendimento direto com os sócios.</div>
-<div><b>Contrato claro</b>Prazo mínimo de 3 meses e escopo escrito.</div>
+<div><b>Você no controle</b>Todas as contas ficam no seu nome.</div>
+<div><b>Transparência</b>Dados e gráficos que fazem sentido.</div>
+<div><b>Foque no seu negócio</b>Você não precisa entender de tecnologia: cuidamos de tudo para você.</div>
+<div><b>Contrato claro</b>Sem letras miúdas, escopo definido e por escrito.</div>
 </div></div>
 
 <section><div class="w">
 <div class="ey">Você se reconhece?</div>
 <h2>O que mais ouvimos de donos de empresa</h2>
 <div class="g3">
-<div class="card"><div class="bar" style="background:var(--co)"></div><div class="q">“Paguei por anúncio e não vi retorno.”</div><p>Muitas vezes ninguém mede o que o anúncio gerou. Nós configuramos a medição antes de gastar a primeira verba.</p></div>
-<div class="card"><div class="bar" style="background:var(--vi)"></div><div class="q">“Eu não entendo o relatório da agência.”</div><p>Você recebe um resumo curto e uma conversa mensal para tirar dúvidas.</p></div>
-<div class="card"><div class="bar" style="background:var(--mi)"></div><div class="q">“Não sei de onde vêm meus clientes.”</div><p>Medimos cada contato (Google, Instagram, anúncios) para você saber o que traz cliente e o que só gasta dinheiro.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><div class="q">“Paguei por anúncio e não vi retorno”</div><p>Muitas vezes ninguém mede o que o anúncio gerou. Nós configuramos a medição antes de gastar a primeira verba.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><div class="q">“Eu não entendo o relatório da agência”</div><p>Aqui, você recebe um resumo claro e conta com uma equipe pronta para tirar dúvidas.</p></div>
+<div class="card"><div class="bar" style="background:var(--mi)"></div><div class="q">“Não sei de onde vêm meus clientes”</div><p>Medimos cada contato (Google, Instagram, anúncios) para você saber o que traz clientes.</p></div>
 </div>
 <div class="cols">
-<div class="card"><h3>Agência comum</h3><ul class="l x"><li>Entrega relatório de curtidas e alcance</li><li>Fala em termos técnicos</li><li>Abre contas em nome da agência</li><li>Decide no feeling e promete resultado rápido</li></ul></div>
-<div class="card me"><h3>DArt Sales</h3><ul class="l"><li>Mostra contatos, ligações e custo por contato</li><li>Explica tudo em português claro</li><li>Mantém as contas no nome da sua empresa</li><li>Decide com dados e fala com franqueza sobre prazo e limites</li></ul></div>
+<div class="card"><h3>Agência comum</h3><ul class="l x"><li>Relatórios sem informação relevante e difíceis de entender</li><li>Falta de clareza: termos técnicos demais</li><li>Contas no nome da agência</li><li>Decisões aleatórias: promessas falsas</li></ul></div>
+<div class="card me">
+	<h3 class="logo" href="#topo" aria-label="DArt Sales"><svg width="38" height="38" viewBox="0 0 120 120" aria-hidden="true"><use href="#sym" width="120" height="120"/></svg><span class="wm"><b>DA</b><i>rt</i></span><span class="sl">Sales</span></h3>
+	<ul class="l"> 
+	<li>Relatórios enxutos e com informações relevantes</li><li>Informações fáceis de entender e clareza nos resultados</li><li>Mantém as contas no nome da sua empresa</li><li>Decisões baseadas em dados: métricas e prazos claros</li></ul></div>
 </div>
 </div></section>
 
 <section class="alt" id="servicos"><div class="w">
 <div class="ey">O que fazemos</div>
-<h2>Marketing e dados, trabalhando juntos</h2>
-<p class="sub">O marketing traz as pessoas até você. Os dados mostram o que está funcionando. Fazemos as duas coisas, com a mesma equipe.</p>
+<h2>Tecnologia a serviço do seu negócio</h2>
+<p class="sub">Dados, processos e marketing trabalhando juntos.</p>
+<p class="sub">O marketing traz as pessoas até você. Os dados mostram como tudo está funcionando. Os processos mantêm o negócio funcionando. </p>
+<p class="sub">A DArt Sales conta com um time multidisciplinar especializado em tecnologia da informação, gestão de processos, administração de empresas e marketing. Usamos estes conhecimentos para gerar valor para nossos clientes.</p>
+<p class="sub">Estamos prontos para ajudar.</p>
+
 <h3 class="pil">Marketing digital</h3>
 <div class="g3">
-<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Tráfego pago</h3><p>Anúncios no Instagram, Facebook e Google para atrair clientes novos. Inclui um relatório mensal. A verba dos anúncios é paga por você direto às plataformas, separada da nossa gestão.</p></div>
-<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Gestão de redes sociais</h3><p>Planejamento e publicação de conteúdo, principalmente no Instagram, com a quantidade de posts combinada em contrato. Produção de vídeo mais elaborada é combinada à parte.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Tráfego pago</h3><p>Anúncios no Instagram, Facebook e Google para atrair clientes novos. Relatórios de acompanhamento.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Gestão de redes sociais</h3><p>Planejamento e publicação de conteúdo.</p></div>
 <div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Google Meu Negócio</h3><p>Sua empresa aparece no Maps e na busca quando alguém procura o que você vende perto dele. Cuidamos do perfil, das postagens, das avaliações e do ranqueamento local.</p></div>
 </div>
 <h3 class="pil">Dados e tecnologia</h3>
 <div class="g3">
 <div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Medição e rastreamento</h3><p>Configuramos as ferramentas (Google Analytics e o pixel dos anúncios) para você saber de onde vem cada contato e quanto custa cada um.</p></div>
-<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Painel de resultados</h3><p>Reunimos os números de anúncios, Google e Instagram, e de vendas quando possível, em um painel simples que você abre no celular.</p></div>
-<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Automação de processos <span class="soon">Em breve</span></h3><p>Tarefas repetidas, como responder as primeiras mensagens ou organizar cadastros e planilhas, passam a ser feitas sozinhas. Estamos estruturando este serviço.</p></div>
+<div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Painel de resultados</h3><p>Reunimos os números de anúncios, Google e Instagram, e de vendas em um relatório fácil de acompanhar e entender.</p></div>
+<div class="card"><div class="bar" style="background:var(--co)"></div><h3>Automação de processos</h3><p>Tarefas repetitivas, como geração de relatórios, resposta ao primeiro contato do cliente e organização de cadastros e planilhas, passam a ser feitas de forma automática.</p></div>
 </div>
 <h3 style="margin-top:38px;font-size:.98rem">Também podemos ajudar com</h3>
 <p class="sub" style="font-size:.92rem;margin-bottom:0">Serviços complementares, combinados conforme a necessidade de cada empresa.</p>
 <div class="g3 mini">
-<div><b>Reputação online</b>Resposta e estratégia para avaliações no Google e nas redes.</div>
-<div><b>Páginas de captura</b>Landing pages simples para campanhas de anúncios.</div>
-<div><b>WhatsApp Business</b>Catálogo, respostas rápidas e fluxo simples de atendimento.</div>
-<div><b>E-mail marketing</b>Para empresas que já têm uma base de contatos.</div>
-<div><b>Consultoria avulsa</b>Orientação pontual para quem quer aprender a fazer internamente.</div>
-<div><b>Identidade visual básica</b>Sob consulta.</div>
+<div><b>Reputação online</b>Resposta e estratégia para avaliações no Google e nas redes sociais.</div>
+<div><b>Páginas de captura de clientes</b>Landing pages persuasivas para campanhas de anúncios.</div>
+<div><b>WhatsApp Business</b>Catálogo, respostas rápidas e fluxo de atendimento.</div>
+<div><b>E-mail marketing</b>Automação e envio de e-mails para clientes.</div>
+<div><b>Identidade visual</b>Sua empresa com a imagem certa.</div>
 </div>
 </div></section>
 
 <section id="metodo"><div class="w">
 <div class="ey">Nosso método</div>
-<h2>Método Claro: três passos, sem mistério</h2>
-<div class="g3">
-<div class="card"><span class="num">1</span><h3>Entender</h3><p>Diagnóstico pago de como sua empresa aparece hoje e de quais dados ela já tem. O relatório é seu, mesmo que você não contrate a gente.</p></div>
-<div class="card"><span class="num">2</span><h3>Montar</h3><p>Configuramos contas e medição e preparamos as primeiras ações. Você aprova antes de ir ao ar.</p></div>
-<div class="card"><span class="num">3</span><h3>Acompanhar</h3><p>Ajustes contínuos, relatório simples todo mês e uma conversa para decidir os próximos passos.</p></div>
-</div>
+<h2>Método Claro: um ciclo de melhoria contínua</h2>
+<p class="sub" style="max-width:64ch">O Método Claro segue o ciclo PDCA, usado na gestão para melhorar sempre: planejar, executar, verificar e ajustar. Cada volta aproveita o que os dados mostraram na anterior, e você acompanha cada etapa.</p>
+<div class="pdc"><svg viewBox="0 0 400 400" role="img" aria-label="Método Claro como ciclo PDCA: Entender, Montar, Acompanhar e Melhorar, em ciclo contínuo"><g class="a a0"><path d="M70.7 186.4 A130 130 0 0 1 164.2 75.0" fill="none" stroke="var(--vi)" stroke-width="40"/><polygon points="157.0,50.0 195.5,70.1 171.3,100.0" fill="var(--vi)"/><text x="100.4" y="125.4" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="26" fill="var(--bg)">P</text></g><g class="a a1"><path d="M213.6 70.7 A130 130 0 0 1 325.0 164.2" fill="none" stroke="var(--mi)" stroke-width="40"/><polygon points="350.0,157.0 329.9,195.5 300.0,171.3" fill="var(--mi)"/><text x="283.6" y="109.4" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="26" fill="var(--bg)">D</text></g><g class="a a2"><path d="M329.3 213.6 A130 130 0 0 1 235.8 325.0" fill="none" stroke="var(--co)" stroke-width="40"/><polygon points="243.0,350.0 204.5,329.9 228.7,300.0" fill="var(--co)"/><text x="299.6" y="292.6" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="26" fill="#0F1217">C</text></g><g class="a a3"><path d="M186.4 329.3 A130 130 0 0 1 75.0 235.8" fill="none" stroke="#F59A5B" stroke-width="40"/><polygon points="50.0,243.0 70.1,204.5 100.0,228.7" fill="#F59A5B"/><text x="116.4" y="308.6" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="26" fill="#0F1217">A</text></g><use href="#sym" x="152" y="146" width="96" height="96"/><text x="200" y="268" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="13" letter-spacing="2.2" style="fill:var(--ink)">MÉTODO CLARO</text><text x="200" y="286" text-anchor="middle" font-family="Sora,sans-serif" font-weight="500" font-size="10" letter-spacing="2" style="fill:var(--sub)">CICLO PDCA</text></svg><div class="pds gp" style="--kb:var(--vi)"><div class="k" style="--kc:var(--bg)">P</div><div><h3>1. Entender <span>· Planejar</span></h3><p>Diagnóstico de como sua empresa aparece hoje e de quais dados ela já tem. Definimos objetivos e prioridades junto com você.</p></div></div><div class="pds gd" style="--kb:var(--mi)"><div class="k" style="--kc:var(--bg)">D</div><div><h3>2. Montar <span>· Executar</span></h3><p>Configuramos contas, medição e preparamos as primeiras ações. Você aprova antes de ir ao ar.</p></div></div><div class="pds gc" style="--kb:var(--co)"><div class="k" style="--kc:#0F1217">C</div><div><h3>3. Acompanhar <span>· Verificar</span></h3><p>Métricas e relatório mostram, com números, o que funcionou e o que não funcionou.</p></div></div><div class="pds ga" style="--kb:#F59A5B"><div class="k" style="--kc:#0F1217">A</div><div><h3>4. Melhorar <span>· Ajustar</span></h3><p>Ajustes contínuos com base nos dados. Contato direto para decidir os próximos passos, e o ciclo recomeça.</p></div></div></div>
 <div class="cols" style="grid-template-columns:1fr">
 <div class="card"><h3>Você pode esperar</h3><ul class="l"><li>Resposta rápida pelo WhatsApp</li><li>Proposta com valor fechado, sem surpresas</li><li>Contrato com prazo e escopo escritos</li></ul></div>
 </div>
@@ -225,34 +239,53 @@ setInterval(function(){tk.style.opacity=0;setTimeout(function(){mi=(mi+1)%msgs.l
 <section class="alt" id="quem"><div class="w">
 <div class="ey">Quem somos</div>
 <h2>Equipe técnica com foco em resultado</h2>
-<p class="sub" style="max-width:62ch">Situada em Fortaleza, a DArt Sales reúne uma equipe com qualificação em engenharia de dados, ciência da computação e processamento de dados. Unimos tecnologia, dados e marketing para medir direito o que cada real investido trouxe de volta.</p>
+<p class="sub" style="max-width:62ch">Situada em Fortaleza, a DArt Sales reúne profissionais com qualificação em engenharia de dados, ciência da computação, processamento de dados, administração de empresas e marketing. Esse time multidisciplinar permite ter uma visão ampla do mercado a partir de diversos pontos de vista, identificando como o seu negócio está posicionado.</p>
 <div class="g3">
 <div class="card"><div class="bar" style="background:var(--mi)"></div><h3>Engenharia de dados</h3><p>Dados organizados e confiáveis, para o relatório mostrar o que realmente aconteceu.</p></div>
 <div class="card"><div class="bar" style="background:var(--vi)"></div><h3>Ciência da computação</h3><p>Configuração correta das ferramentas e da medição, para que nada se perca pelo caminho.</p></div>
 <div class="card"><div class="bar" style="background:var(--co)"></div><h3>Processamento de dados</h3><p>Análise dos números para decidir onde vale investir mais e onde cortar.</p></div>
 </div>
-<p style="margin-top:20px"><span class="ph">Casos reais e depoimentos entram aqui assim que os primeiros clientes autorizarem. Não publique números antes disso.</span></p>
-</div></section>
+<!-- <p style="margin-top:20px"><span class="ph">Casos reais e depoimentos entram aqui assim que os primeiros clientes autorizarem. Não publique números antes disso.</span></p>
+-->
+</div>
+</section>
 
 <section id="duvidas"><div class="w" style="max-width:760px">
 <div class="ey">Dúvidas comuns</div>
 <h2>Perguntas que todo dono de empresa faz</h2>
-<details><summary>Vocês só fazem marketing?</summary><p>O marketing digital é o ponto de partida. Também ajudamos a medir e organizar os dados da empresa para você decidir melhor. Automação de processos é o próximo passo, e falamos com clareza o que já está pronto e o que ainda não.</p></details>
-<details><summary>Quanto custa?</summary><p>Depende do que sua empresa precisa. Depois da conversa e do diagnóstico, enviamos uma proposta com valor fechado.</p></details>
-<details><summary>Quanto devo investir em anúncios?</summary><p>Varia por segmento. Verbas muito baixas geram poucos dados para melhorar a campanha, e falamos com franqueza sobre isso antes de você gastar.</p></details>
+<details><summary>Vocês só fazem marketing?</summary><p>O marketing digital é uma das nossas áreas de atuação e um bom ponto de partida. Somos uma equipe multidisciplinar que também auxilia sua empresa a coletar, medir e apresentar os dados da empresa, gerando valor para você decidir melhor. Também atuamos em automação de processos, trazendo eficiência e melhorando a operação do seu negócio.</p></details>
+<details><summary>Quanto custa?</summary><p>Bem menos do que você deve estar perdendo para o seu concorrente. Praticamos preços justos e aderentes ao mercado. Temos diversos serviços, e após um diagnóstico enviamos uma proposta com valor fechado, sem surpresas.</p></details>
+<details><summary>Quanto devo investir em anúncios?</summary><p>Varia por segmento. Verbas muito baixas geram poucos dados para melhorar a campanha, e falamos com clareza sobre isso antes de você gastar.</p></details>
 <details><summary>Em quanto tempo vejo resultado?</summary><p>Alguns sinais aparecem nas primeiras semanas, mas um resultado consistente costuma levar de 3 a 6 meses.</p></details>
-<details><summary>As contas ficam no meu nome?</summary><p>Sim. Perfis, páginas e contas de anúncio ficam em nome da sua empresa.</p></details>
-<details><summary>Preciso saber de tecnologia?</summary><p>Não. Cuidamos da parte técnica. Precisamos de você para explicar o que a empresa vende e atender bem quem chega.</p></details>
+<details><summary>As contas ficam no meu nome?</summary><p>Sim. Perfis, páginas e contas de anúncio ficam no nome da sua empresa.</p></details>
+<details><summary>Preciso saber de tecnologia?</summary><p>Não. Nós cuidamos da parte técnica. Mas você participa junto da construção de todas as soluções, gerando mais valor e assertividade à estratégia do seu negócio.</p></details>
 </div></section>
 
 <section class="fin" id="contato"><div class="w" style="max-width:760px">
 <h2>Vamos conversar sobre a sua empresa?</h2>
 <p>A primeira conversa é sem compromisso. Você explica seu negócio e nós dizemos com sinceridade se podemos ajudar.</p>
-<div class="cta" style="justify-content:center"><a class="btn co" href="https://wa.me/5585900000000?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico.">Chamar no WhatsApp</a><a class="btn o" href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></div>
-<p style="margin-top:16px;font-size:.88rem"><span class="ph" style="background:#161C24;border-color:#50A2CD">Trocar número do WhatsApp e e-mail</span> · Fortaleza, CE</p>
-</div></section>
+<div class="cta" style="justify-content:center"><a class="btn co" href="https://wa.me/5585986860214?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico.">Chamar no WhatsApp</a><a class="btn o" href="mailto:contato@dartsales.com.br">contato@dartsales.com.br</a></div>
+</div></section> 
+<!--
+<section class="fin" id="contato"><div class="w" style="max-width:760px">
+<h2>Vamos conversar sobre a sua empresa?</h2>
+<p>A primeira conversa é sem compromisso. Você explica seu negócio e nós dizemos com sinceridade se podemos ajudar.</p>
+<div class="cta" style="justify-content:center"><a class="btn co" href="https://wa.me/5585986860214?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20diagn%C3%B3stico.">Chamar no WhatsApp</a><a class="btn o" href="mailto:contato@dartsales.com.br">contato@dartsales.com.br</a></div>
+</div></section> 
 
-<footer><div class="w"><span class="logo" style="gap:8px"><svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true"><use href="#sym" width="120" height="120"/></svg><span class="wm" style="font-size:1.1rem"><b>DA</b><i>rt</i></span><span class="sl" style="font-size:.9rem">Sales</span></span><span>© DArt Sales · CNPJ 00.000.000/0001-00 · Fortaleza, Ceará</span></div></footer>
-<a class="zap" href="https://wa.me/5585900000000">WhatsApp</a>
+<footer><div class="w" style="align-content: center;"><span class="logo" style="gap:8px"><svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true"><use href="#sym" width="120" height="120"/></svg><span class="wm" style="font-size:1.1rem"><b>DA</b><i>rt</i></span><span class="sl" style="font-size:.9rem">Sales</span></span></div></footer>
+-->
+<footer style="text-align: center;">
+	<div>
+		<span><p>© 2026 DArt Sales. Todos os direitos reservados.<br>Fortaleza/Brasil</p></span>
+		<span>Desenvolvido por:</span>
+
+		<span class="logo" style="gap:8px; display: contents;">
+		<span class="wm" style="font-size:1.1rem"><b>DA</b><i>rt</i></span>
+		<span class="sl" style="font-size:.9rem">Sales</span></span>
+	</div>
+</footer>
+ 
+<a class="zap" href="https://wa.me/5585986860214">WhatsApp</a>
 </body>
 </html>
